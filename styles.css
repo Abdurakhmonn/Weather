@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+button:hover {
+    background-color: #45a049;
+    color: #fff;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#weatherResult {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.forecast-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.forecast-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Остальные стили оставляем такими же */
+
+.forecast-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.forecast-item {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-date {
+    font-weight: bold;
+    text-align: center;
+}
+
+.forecast-description {
+    flex-grow: 1;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.forecast-temp {
+    font-weight: bold;
+    text-align: center;
+}
+  
+/* Остальные стили оставляем такими же */
+
+.current-weather div {
+    margin-bottom: 5px;
+}
+
+/* Увеличиваем размер иконок погоды */
+.weather-info .description img {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+}
+
+/* Увеличиваем размер квадратиков с прогнозом погоды */
+.forecast-list .forecast-item {
+    width: calc(20% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Остальные стили оставляем такими же */
+
+/* Стили для иконок погоды */
+.weather-info .description img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Добавляем медиазапрос для уменьшения размера иконок на маленьких экранах */
+@media (max-width: 768px) {
+    .weather-info .description img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Остальные стили оставляем без изменений */
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 1s ease;
+}
+
+.current-weather, .forecast-list {
+    animation: fadeInUp 1s ease;
+}
+
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Остальные стили оставляем такими же */
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%;
+    }
+
+    .forecast-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-item {
+        width: 100%;
+    }
+}
+

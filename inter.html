@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>Погода</h1>
+            </header>
+            
+            <main>
+                <form id="weatherForm">
+                    <input type="text" id="city" placeholder="Введите название города" required>
+                    <button type="submit">Узнать</button>
+                </form>
+                
+                <div id="weatherResult">
+                    <!-- Здесь будут отображаться данные о погоде -->
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
